@@ -10,11 +10,6 @@
 		035279591F95CCAE00FA7CE9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 035279581F95CCAE00FA7CE9 /* main.cpp */; };
 		035279711F95CFD300FA7CE9 /* Seller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0352796F1F95CFD300FA7CE9 /* Seller.cpp */; };
 		035279771F95D0BD00FA7CE9 /* Customer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 035279751F95D0BD00FA7CE9 /* Customer.cpp */; };
-		0352797A1F95D0CD00FA7CE9 /* HighLevelSeller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 035279781F95D0CD00FA7CE9 /* HighLevelSeller.cpp */; };
-		0352797D1F95D0DE00FA7CE9 /* MidLevelSeller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0352797B1F95D0DE00FA7CE9 /* MidLevelSeller.cpp */; };
-		035279801F95D0EF00FA7CE9 /* LowLevelSeller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0352797E1F95D0EF00FA7CE9 /* LowLevelSeller.cpp */; };
-		035279831F95D10400FA7CE9 /* Seat.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 035279811F95D10400FA7CE9 /* Seat.cpp */; };
-		035279861F95D21100FA7CE9 /* Ampitheatre.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 035279841F95D21100FA7CE9 /* Ampitheatre.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -36,15 +31,10 @@
 		035279701F95CFD300FA7CE9 /* Seller.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Seller.hpp; sourceTree = "<group>"; };
 		035279751F95D0BD00FA7CE9 /* Customer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Customer.cpp; sourceTree = "<group>"; };
 		035279761F95D0BD00FA7CE9 /* Customer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Customer.hpp; sourceTree = "<group>"; };
-		035279781F95D0CD00FA7CE9 /* HighLevelSeller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = HighLevelSeller.cpp; sourceTree = "<group>"; };
 		035279791F95D0CD00FA7CE9 /* HighLevelSeller.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HighLevelSeller.hpp; sourceTree = "<group>"; };
-		0352797B1F95D0DE00FA7CE9 /* MidLevelSeller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MidLevelSeller.cpp; sourceTree = "<group>"; };
 		0352797C1F95D0DE00FA7CE9 /* MidLevelSeller.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MidLevelSeller.hpp; sourceTree = "<group>"; };
-		0352797E1F95D0EF00FA7CE9 /* LowLevelSeller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LowLevelSeller.cpp; sourceTree = "<group>"; };
 		0352797F1F95D0EF00FA7CE9 /* LowLevelSeller.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LowLevelSeller.hpp; sourceTree = "<group>"; };
-		035279811F95D10400FA7CE9 /* Seat.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Seat.cpp; sourceTree = "<group>"; };
 		035279821F95D10400FA7CE9 /* Seat.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Seat.hpp; sourceTree = "<group>"; };
-		035279841F95D21100FA7CE9 /* Ampitheatre.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Ampitheatre.cpp; sourceTree = "<group>"; };
 		035279851F95D21100FA7CE9 /* Ampitheatre.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Ampitheatre.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,15 +73,10 @@
 				035279761F95D0BD00FA7CE9 /* Customer.hpp */,
 				0352796F1F95CFD300FA7CE9 /* Seller.cpp */,
 				035279701F95CFD300FA7CE9 /* Seller.hpp */,
-				035279781F95D0CD00FA7CE9 /* HighLevelSeller.cpp */,
 				035279791F95D0CD00FA7CE9 /* HighLevelSeller.hpp */,
-				0352797B1F95D0DE00FA7CE9 /* MidLevelSeller.cpp */,
 				0352797C1F95D0DE00FA7CE9 /* MidLevelSeller.hpp */,
-				0352797E1F95D0EF00FA7CE9 /* LowLevelSeller.cpp */,
 				0352797F1F95D0EF00FA7CE9 /* LowLevelSeller.hpp */,
-				035279811F95D10400FA7CE9 /* Seat.cpp */,
 				035279821F95D10400FA7CE9 /* Seat.hpp */,
-				035279841F95D21100FA7CE9 /* Ampitheatre.cpp */,
 				035279851F95D21100FA7CE9 /* Ampitheatre.hpp */,
 			);
 			path = Homework3;
@@ -154,13 +139,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				035279801F95D0EF00FA7CE9 /* LowLevelSeller.cpp in Sources */,
 				035279711F95CFD300FA7CE9 /* Seller.cpp in Sources */,
 				035279591F95CCAE00FA7CE9 /* main.cpp in Sources */,
-				0352797D1F95D0DE00FA7CE9 /* MidLevelSeller.cpp in Sources */,
-				035279861F95D21100FA7CE9 /* Ampitheatre.cpp in Sources */,
-				0352797A1F95D0CD00FA7CE9 /* HighLevelSeller.cpp in Sources */,
-				035279831F95D10400FA7CE9 /* Seat.cpp in Sources */,
 				035279771F95D0BD00FA7CE9 /* Customer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

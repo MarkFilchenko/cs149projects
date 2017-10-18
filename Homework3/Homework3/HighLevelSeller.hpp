@@ -13,7 +13,12 @@
 #include "Seller.hpp"
 class HighLevelSeller: public Seller{
 public:
-    HighLevelSeller(string n);
+    HighLevelSeller(){
+        
+    }
+    HighLevelSeller(string n):Seller(n){
+        
+    }
     
 };
 

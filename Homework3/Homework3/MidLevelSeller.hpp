@@ -13,8 +13,12 @@
 #include "Seller.hpp"
 class MidLevelSeller: public Seller{
 public:
-    MidLevelSeller();
-    MidLevelSeller(string n);
+    MidLevelSeller(){
+        
+    }
+    MidLevelSeller(string n):Seller(){
+        
+    }
 };
 
 #endif /* MidLevelSeller_hpp */

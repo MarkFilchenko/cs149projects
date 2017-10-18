@@ -10,10 +10,7 @@
 #define Ampitheatre_hpp
 
 #include <stdio.h>
-#include "Seat.cpp"
-
-
-
+#include "Seat.hpp"
 
 /**
  * Holds the array of seats, sellers, and availability information
