@@ -18,7 +18,8 @@
 #include<signal.h>
 
 using namespace std;
-#define SELL_HOUR_DURATION 60;
+
+int SELL_HOUR_DURATION = 60;
 int  TOTAL_CUSTOMERS = 300;			//generate 300 customers/threads
 int CUSTOMERID = 0;                 //each cutomer has unique id
 
@@ -33,17 +34,13 @@ int ARRIVE = 0;
 int IMPATIENT = 0;
 int BUYINGSUCCESS = 0;
 
-
-
 vector<pthread_mutex_t> queueMutexs; //mutex protects queue
 pthread_mutex_t seatMutex;
 pthread_mutex_t printMutex;
 
-
 vector<sem_t> filledQueues; //send the signal to the sellers if the queue has people
 struct itimerval sellTimer;
 time_t mystart, myend;
-
 
 class Customer;
 class Seat;
@@ -52,6 +49,34 @@ class MyTimer;
 
 void customerArrives(Customer* customer);
 void print(string string);
+/**
+ *
+ * Model for each seat in the ampitheatre
+**/
+class Seat
+{
+    
+public:
+    Seat();
+    ~Seat();
+    
+    void isSold();
+    bool getSold();
+    void setCustomer(Customer* customer);
+    Customer* getCustomer();
+    void setSeller(Seller* seller);
+    Seller* getSeller();
+    void setPriceLevel(int pricelevel);
+    int getPriceLevel();
+    string getName();
+
+private:
+    bool sold;
+    Customer* customer;
+    Seller* seller;
+
+};
+
 
 /**
  *
@@ -79,35 +104,6 @@ private:
 
 /**
  *
- * Model for each seat in the ampitheatre
-**/
-class Seat
-{
-    
-public:
-    Seat();
-    ~Seat();
-    
-    void isSold();
-    bool getSold();
-    void setCustomer(Customer* customer);
-    Customer* getCustomer();
-    void setSeller(Seller* seller);
-    Seller* getSeller();
-    void setPriceLevel(int pricelevel);
-    int getPriceLevel();
-    string getName();
-    
-    
-private:
-    bool sold;
-    Customer* customer;
-    Seller* seller;
-
-};
-
-/**
- *
  * Model for each seller that will process the customer/thread
  **/
 class Seller
@@ -128,10 +124,6 @@ public:
     vector<Customer*>* getQueue();
     bool checkAvailability();
     bool serveCustomer();
-    
-    
-    
-    
 private:
     int pricelevel;
     int id;
@@ -147,9 +139,8 @@ vector<Seat*> seats;
 vector<Customer*> customers;
 Customer::Customer()
 {
-    
-    this->customerid = CUSTOMERID;
     this->seat = NULL;
+    this->customerid = CUSTOMERID;
     this->waittime = 0;
     
     ostringstream s;
@@ -161,31 +152,11 @@ Customer::Customer()
 }
 
 
-Customer::~Customer()
-{
-}
-
-string Customer::getName()
-{
-    return name;
-}
-
-int Customer::getID()
-{
-    return customerid;
-}
-
-int Customer::getWaitTime()
-{
-    return waittime;
-}
-
-void Customer::addWaitTime(int waitime)
-{
-    waittime += waitime;
-}
-
-
+Customer::~Customer(){}
+string Customer::getName(){ return name;}
+int Customer::getID(){ return customerid; }
+int Customer::getWaitTime(){return waittime; }
+void Customer::addWaitTime(int waitime){ waittime += waitime; }
 Seller::Seller(int pricelevel,int id, int n)
 {
     this->pricelevel = pricelevel;
@@ -212,45 +183,14 @@ Seller::Seller(int pricelevel,int id, int n)
     }
 }
 
-Seller::~Seller()
-{
-}
-
-void Seller::setPriceLevel(int pricelevel)
-{
-    this->pricelevel = pricelevel;
-}
-
-int Seller::getPriceLevel()
-{
-    return this->pricelevel;
-}
-
-void Seller::setID(int id)
-{
-    this->id = id;
-}
-
-int Seller::getID()
-{
-    return id;
-}
-
-string Seller::getName()
-{
-    return name;
-}
-
-int Seller::getSizeOfQueue()
-{
-    return queue.size();
-}
-
-void Seller::setTheSizeOfQueue(int n)
-{
-    this->n = n;
-}
-
+Seller::~Seller(){}
+void Seller::setPriceLevel(int pricelevel){ this->pricelevel = pricelevel;}
+int Seller::getPriceLevel(){ return this->pricelevel;}
+void Seller::setID(int id){ this->id = id; }
+int Seller::getID(){ return id;}
+string Seller::getName(){ return name;}
+int Seller::getSizeOfQueue(){ return queue.size();}
+void Seller::setTheSizeOfQueue(int n){this->n = n;}
 bool Seller::addCustomerToQueue(Customer* customer)
 {
     if (queue.size() == n)
@@ -260,10 +200,7 @@ bool Seller::addCustomerToQueue(Customer* customer)
     return true;
 }
 
-vector<Customer*>* Seller::getQueue()
-{
-    return &queue;
-}
+vector<Customer*>* Seller::getQueue(){ return &queue; }
 
 bool Seller::checkAvailability(){
 //check availability, if open seat return true. Else return false
@@ -566,7 +503,8 @@ bool Seller::checkAvailability(){
         queue.clear();
         timesUp = 1;
         
-        return false;					//at this point, all seats was checked, but no more seats can sell, then return null
+        return false;
+        //at this point, all seats were checked and no more seats can sell, then return null
     }
     if (this->pricelevel == 2)
     {
@@ -592,14 +530,14 @@ bool Seller::checkAvailability(){
             continue;
         }
         queue.erase(queue.begin());
-        TURNAWAY = TURNAWAY + queue.size();
+        TURNAWAY += queue.size();
         stringstream ss3;
         ss3 << serve->getName() << " cannot buy ticket and leave "<< this->name <<" queue! :D";
         string = ss3.str();
         print(string);
         TURNAWAY++;
         
-        timesUp = 1;
+        timesUp = 1;//times up
         return false;
     }
     
