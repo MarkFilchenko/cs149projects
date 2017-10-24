@@ -1,17 +1,33 @@
-//
-//  Seat.hpp
-//  Homework3
-//
-//  Created by Josh on 10/16/17.
-//  Copyright © 2017 Josh. All rights reserved.
-//
-
-#ifndef Seat_hpp
-#define Seat_hpp
+#ifndef HW_3_SEAT_H
+#define HW_3_SEAT_H
 
 #include <stdio.h>
+#include <string>
+
+#include "Customer.hpp"
+#include "Seller.hpp"
+
 class Seat{
-    
+
+private:
+    bool sold;
+    Customer* customer;
+    Seller* seller;
+
+public:
+    Seat();
+
+    void isSold();
+    bool getSold();
+
+    void setCustomer(Customer* customer);
+    Customer* getCustomer();
+
+    void setSeller(Seller* seller);
+    Seller* getSeller();
+
+    void setPriceLevel(int priceLevel);
+    int  getPriceLevel();
 };
 
-#endif /* Seat_hpp */
+#endif //HW_3_SEAT_H
