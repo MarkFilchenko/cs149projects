@@ -20,15 +20,15 @@ class Seller{
 protected:
     //All sellers have a name, queue of customers
     string name;
-    priority_queue<Customer> customers;
+    priority_queue<customer> customers;
     
 public:
     Seller();
     Seller(string n);
-    void queueCustomer(Customer c);
+    void queueCustomer(customer c);
     void dequeueCustomer();
     void processTicket();
-    priority_queue<Customer> getCustomers();
+    priority_queue<customer> getCustomers();
     
     
     

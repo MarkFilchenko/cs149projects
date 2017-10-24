@@ -11,7 +11,7 @@ class Seat{
 
 private:
     bool sold;
-    Customer* customer;
+    customer* customer;
     Seller* seller;
 
 public:
@@ -20,8 +20,8 @@ public:
     void isSold();
     bool getSold();
 
-    void setCustomer(Customer* customer);
-    Customer* getCustomer();
+    void setCustomer(::customer* customer);
+    ::customer* getCustomer();
 
     void setSeller(Seller* seller);
     Seller* getSeller();

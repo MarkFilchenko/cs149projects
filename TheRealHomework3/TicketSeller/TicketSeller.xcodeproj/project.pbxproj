@@ -7,12 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		035279591F95CCAE00FA7CE9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 035279581F95CCAE00FA7CE9 /* main.cpp */; };
-		035279711F95CFD300FA7CE9 /* Seller.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0352796F1F95CFD300FA7CE9 /* Seller.cpp */; };
+		035279DF1F9F023D00FA7CE9 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 035279DE1F9F023D00FA7CE9 /* main.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		035279531F95CCAA00FA7CE9 /* CopyFiles */ = {
+		035279D91F9F023D00FA7CE9 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -24,23 +23,12 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		035279551F95CCAE00FA7CE9 /* Homework3 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = Homework3; sourceTree = BUILT_PRODUCTS_DIR; };
-		035279581F95CCAE00FA7CE9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
-		0352796F1F95CFD300FA7CE9 /* Seller.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Seller.cpp; sourceTree = "<group>"; };
-		035279701F95CFD300FA7CE9 /* Seller.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Seller.hpp; sourceTree = "<group>"; };
-		035279761F95D0BD00FA7CE9 /* Customer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Customer.hpp; sourceTree = "<group>"; };
-		035279791F95D0CD00FA7CE9 /* HighLevelSeller.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = HighLevelSeller.hpp; sourceTree = "<group>"; };
-		0352797C1F95D0DE00FA7CE9 /* MidLevelSeller.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MidLevelSeller.hpp; sourceTree = "<group>"; };
-		0352797F1F95D0EF00FA7CE9 /* LowLevelSeller.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LowLevelSeller.hpp; sourceTree = "<group>"; };
-		035279821F95D10400FA7CE9 /* Seat.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Seat.hpp; sourceTree = "<group>"; };
-		035279851F95D21100FA7CE9 /* Ampitheatre.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = Ampitheatre.hpp; sourceTree = "<group>"; };
-		035279CF1F9EFB8F00FA7CE9 /* Timer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Timer.hpp; sourceTree = "<group>"; };
-		035279D01F9EFD0500FA7CE9 /* PriceGuide.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = PriceGuide.h; path = "../../Homework 3 cpp/PriceGuide.h"; sourceTree = "<group>"; };
-		035279D11F9EFD1100FA7CE9 /* SeatMatrix.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = SeatMatrix.h; path = "../../Homework 3 cpp/SeatMatrix.h"; sourceTree = "<group>"; };
+		035279DB1F9F023D00FA7CE9 /* TicketSeller */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = TicketSeller; sourceTree = BUILT_PRODUCTS_DIR; };
+		035279DE1F9F023D00FA7CE9 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		035279521F95CCAA00FA7CE9 /* Frameworks */ = {
+		035279D81F9F023D00FA7CE9 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -50,107 +38,95 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0352794C1F95CCAA00FA7CE9 = {
+		035279D21F9F023D00FA7CE9 = {
 			isa = PBXGroup;
 			children = (
-				035279571F95CCAE00FA7CE9 /* Homework3 */,
-				035279561F95CCAE00FA7CE9 /* Products */,
+				035279DD1F9F023D00FA7CE9 /* TicketSeller */,
+				035279DC1F9F023D00FA7CE9 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		035279561F95CCAE00FA7CE9 /* Products */ = {
+		035279DC1F9F023D00FA7CE9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				035279551F95CCAE00FA7CE9 /* Homework3 */,
+				035279DB1F9F023D00FA7CE9 /* TicketSeller */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		035279571F95CCAE00FA7CE9 /* Homework3 */ = {
+		035279DD1F9F023D00FA7CE9 /* TicketSeller */ = {
 			isa = PBXGroup;
 			children = (
-				035279581F95CCAE00FA7CE9 /* main.cpp */,
-				035279761F95D0BD00FA7CE9 /* Customer.hpp */,
-				0352796F1F95CFD300FA7CE9 /* Seller.cpp */,
-				035279701F95CFD300FA7CE9 /* Seller.hpp */,
-				035279791F95D0CD00FA7CE9 /* HighLevelSeller.hpp */,
-				0352797C1F95D0DE00FA7CE9 /* MidLevelSeller.hpp */,
-				0352797F1F95D0EF00FA7CE9 /* LowLevelSeller.hpp */,
-				035279821F95D10400FA7CE9 /* Seat.hpp */,
-				035279851F95D21100FA7CE9 /* Ampitheatre.hpp */,
-				035279CF1F9EFB8F00FA7CE9 /* Timer.hpp */,
-				035279D01F9EFD0500FA7CE9 /* PriceGuide.h */,
-				035279D11F9EFD1100FA7CE9 /* SeatMatrix.h */,
+				035279DE1F9F023D00FA7CE9 /* main.cpp */,
 			);
-			path = Homework3;
+			path = TicketSeller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		035279541F95CCAA00FA7CE9 /* Homework3 */ = {
+		035279DA1F9F023D00FA7CE9 /* TicketSeller */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0352795C1F95CCAE00FA7CE9 /* Build configuration list for PBXNativeTarget "Homework3" */;
+			buildConfigurationList = 035279E21F9F023D00FA7CE9 /* Build configuration list for PBXNativeTarget "TicketSeller" */;
 			buildPhases = (
-				035279511F95CCAA00FA7CE9 /* Sources */,
-				035279521F95CCAA00FA7CE9 /* Frameworks */,
-				035279531F95CCAA00FA7CE9 /* CopyFiles */,
+				035279D71F9F023D00FA7CE9 /* Sources */,
+				035279D81F9F023D00FA7CE9 /* Frameworks */,
+				035279D91F9F023D00FA7CE9 /* CopyFiles */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = Homework3;
-			productName = Homework3;
-			productReference = 035279551F95CCAE00FA7CE9 /* Homework3 */;
+			name = TicketSeller;
+			productName = TicketSeller;
+			productReference = 035279DB1F9F023D00FA7CE9 /* TicketSeller */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0352794D1F95CCAA00FA7CE9 /* Project object */ = {
+		035279D31F9F023D00FA7CE9 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = Josh;
 				TargetAttributes = {
-					035279541F95CCAA00FA7CE9 = {
+					035279DA1F9F023D00FA7CE9 = {
 						CreatedOnToolsVersion = 8.2.1;
 						ProvisioningStyle = Automatic;
 					};
 				};
 			};
-			buildConfigurationList = 035279501F95CCAA00FA7CE9 /* Build configuration list for PBXProject "Homework3" */;
+			buildConfigurationList = 035279D61F9F023D00FA7CE9 /* Build configuration list for PBXProject "TicketSeller" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 			);
-			mainGroup = 0352794C1F95CCAA00FA7CE9;
-			productRefGroup = 035279561F95CCAE00FA7CE9 /* Products */;
+			mainGroup = 035279D21F9F023D00FA7CE9;
+			productRefGroup = 035279DC1F9F023D00FA7CE9 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				035279541F95CCAA00FA7CE9 /* Homework3 */,
+				035279DA1F9F023D00FA7CE9 /* TicketSeller */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		035279511F95CCAA00FA7CE9 /* Sources */ = {
+		035279D71F9F023D00FA7CE9 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				035279711F95CFD300FA7CE9 /* Seller.cpp in Sources */,
-				035279591F95CCAE00FA7CE9 /* main.cpp in Sources */,
+				035279DF1F9F023D00FA7CE9 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
-		0352795A1F95CCAE00FA7CE9 /* Debug */ = {
+		035279E01F9F023D00FA7CE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -197,7 +173,7 @@
 			};
 			name = Debug;
 		};
-		0352795B1F95CCAE00FA7CE9 /* Release */ = {
+		035279E11F9F023D00FA7CE9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -237,14 +213,14 @@
 			};
 			name = Release;
 		};
-		0352795D1F95CCAE00FA7CE9 /* Debug */ = {
+		035279E31F9F023D00FA7CE9 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		0352795E1F95CCAE00FA7CE9 /* Release */ = {
+		035279E41F9F023D00FA7CE9 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -254,25 +230,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		035279501F95CCAA00FA7CE9 /* Build configuration list for PBXProject "Homework3" */ = {
+		035279D61F9F023D00FA7CE9 /* Build configuration list for PBXProject "TicketSeller" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0352795A1F95CCAE00FA7CE9 /* Debug */,
-				0352795B1F95CCAE00FA7CE9 /* Release */,
+				035279E01F9F023D00FA7CE9 /* Debug */,
+				035279E11F9F023D00FA7CE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0352795C1F95CCAE00FA7CE9 /* Build configuration list for PBXNativeTarget "Homework3" */ = {
+		035279E21F9F023D00FA7CE9 /* Build configuration list for PBXNativeTarget "TicketSeller" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0352795D1F95CCAE00FA7CE9 /* Debug */,
-				0352795E1F95CCAE00FA7CE9 /* Release */,
+				035279E31F9F023D00FA7CE9 /* Debug */,
+				035279E41F9F023D00FA7CE9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0352794D1F95CCAA00FA7CE9 /* Project object */;
+	rootObject = 035279D31F9F023D00FA7CE9 /* Project object */;
 }

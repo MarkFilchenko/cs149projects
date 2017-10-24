@@ -51,7 +51,7 @@ int main(int argc, const char * argv[]) {
     
     LowLevelSeller lowSellers[NumbLowSellers];
     MidLevelSeller midSellers[NumbMidSellers];
-    vector<Customer> allCustomers = vector<Customer>();
+    vector<customer> allCustomers = vector<customer>();
     
     HighLevelSeller H = HighLevelSeller("H");
     
@@ -67,7 +67,7 @@ int main(int argc, const char * argv[]) {
     LowLevelSeller L6 = LowLevelSeller("L6");
     
     for(int i = 1; i <= N; i++){
-        allCustomers.push_back(*new Customer());
+        allCustomers.push_back(*new customer());
     }
     lowSellers[0] = L1;
     lowSellers[1] = L2;

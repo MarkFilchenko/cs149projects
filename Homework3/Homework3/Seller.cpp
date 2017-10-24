@@ -12,15 +12,15 @@ Seller::Seller(){
 }
 Seller::Seller(string n){
     name = n;
-    customers = priority_queue<Customer>();
+    customers = priority_queue<customer>();
 }
-void Seller::queueCustomer(Customer c){
+void Seller::queueCustomer(customer c){
     customers.push(c);
 }
 void Seller::dequeueCustomer(){
     customers.pop();
 }
 
-priority_queue<Customer> Seller::getCustomers(){
+priority_queue<customer> Seller::getCustomers(){
     return customers;
 }
