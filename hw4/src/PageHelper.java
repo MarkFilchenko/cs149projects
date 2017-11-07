@@ -11,7 +11,7 @@ import java.util.*;
  * @author josh
  *
  */
-public abstract class PageHelper 
+public abstract class PageHelper extends Pager
 {
 	public static final int MAX_REFERENCES = 100;
     public static final int MEMORY_FRAMES = 4;

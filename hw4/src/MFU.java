@@ -2,7 +2,7 @@
 /**
  * Implementation of the most-frequently-used paging algorithm
  */
-public class MFU extends Pager
+public class MFU extends PageHelper
 {
 
     /**
@@ -10,17 +10,18 @@ public class MFU extends Pager
      */
     public int getEvictionIndex()
     {
-        int index = 0, max = 0;
+        int index = 0, max = 0, i = 0;
         for (Page p : getMemoryTable())
         {
             // new max found, reset max
-            if (max < p.useCount)
+            if (max < p.number)
             {
-                max = p.useCount;
-                index++;
+                max = p.number;
+                index = i;
             }
+            i++;
         }
-        getMemoryTable().get(index).useCount = 0; // reset useCount after index found
+        getMemoryTable().get(index).number = 0; // reset useCount after index found
         return index;
     }
 }

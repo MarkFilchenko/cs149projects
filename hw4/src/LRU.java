@@ -2,7 +2,7 @@
 /**
  * Implementation of the least-recently-used paging algorithm
  */
-public class LRU extends Pager
+public class LRU extends PageHelper
 {
     /**
      * @return index of the least recently used process in the page table
@@ -13,10 +13,10 @@ public class LRU extends Pager
         for (Page p : getMemoryTable())
         {
             // older process found so retrieve its index
-            if (p.previousRef < oldest || oldest == -1)
+            if (p.lastReferenced < oldest || oldest == -1)
             {
             	index = i;
-            	oldest = p.previousRef;
+            	oldest = p.lastReferenced;
             }
             ++i;
         }

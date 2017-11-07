@@ -2,7 +2,7 @@
 /**
  * Implementation of the least-frequently-used paging algorithm
  */
-public class LFU extends Pager
+public class LFU extends PageHelper
 {
 
     /**
@@ -15,18 +15,18 @@ public class LFU extends Pager
         {
             if (i == 0)
             {
-                min = p.useCount;
+                min = p.number;
                 index = i;
             }
             // new min found, reset min
-            else if (min > p.useCount)
+            else if (min > p.number)
             {
-                min = p.useCount;
+                min = p.number;
                 index = i;
             }
             i++;
         }
-        getMemoryTable().get(index).useCount = 0; // reset useCount after index found
+        getMemoryTable().get(index).number = 0; // reset useCount after index found
         return index;
     }
 

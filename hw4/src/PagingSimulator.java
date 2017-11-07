@@ -22,9 +22,10 @@ public class PagingSimulator
         Simulator[] sims = new Simulator[] 
         {
             new Simulator(new FIFO(), "First In First Out"),
-            //LRU
-            //LFU
-            //MFU
+            new Simulator(new LRU(), "Least Recently Used"),
+            new Simulator(new LFU(), "Least Frequently Used"),
+            new Simulator(new MFU(), "Most Frequently Used"),
+            new Simulator(new RandomEvict(), "Random Pick"),
             //random pick
            
         };       

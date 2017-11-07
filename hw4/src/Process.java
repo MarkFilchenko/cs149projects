@@ -18,7 +18,7 @@ public class Process
        * all of the pages onto disk
        * @param pager a Paging Algorithm that has memory and disk to load pages into 
      */
-    public Process(PageHelper pager)
+    public Process(Pager pager)
     {
         List<Page> disk = pager.getDiskTable();
         

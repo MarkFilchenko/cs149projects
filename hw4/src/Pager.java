@@ -75,7 +75,7 @@ public abstract class Pager
      */
     public void simulate()
     {
-        PagingProcess proc = new PagingProcess(this);
+        Process proc = new Process(this);
         int pageNum;
         while (pageRefs < maxRefs)
         {
@@ -92,7 +92,7 @@ public abstract class Pager
             if (proc.pages[pageNum].inMemory)
             {
             	++hits;
-            	proc.pages[pageNum].previousRef = pageRefs;
+            	proc.pages[pageNum].lastReferenced = pageRefs;
             }
             else
             { // get the page from disk and evict a page if needed
@@ -108,7 +108,7 @@ public abstract class Pager
             {
                 for (Page p : memory)
                 {
-                    p.useCount++;
+                    p.number++;
                 }
             }
         }
@@ -122,7 +122,7 @@ public abstract class Pager
     {
         int evictIndex = -1;
         fromDisk.inMemory = true;
-        fromDisk.previousRef = pageRefs;
+        fromDisk.lastReferenced = pageRefs;
 
         // while memory is not full fill its available space
         if (memory.size() < memoryFrames)
@@ -137,9 +137,9 @@ public abstract class Pager
             evictIndex = getEvictionIndex();
             Page fromMem = memory.get(evictIndex);
             // reset Page's attributes to be evicted
-            fromMem.previousRef = -1;
+            fromMem.lastReferenced = -1;
             fromMem.inMemory = false;
-            fromMem.useCount = 0;
+            fromMem.number = 0;
             memoryQueue.remove(fromMem);
             System.out.format(" Evicting Page %d.", fromMem.number);
 
